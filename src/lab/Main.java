@@ -24,20 +24,20 @@ public class Main {
         int[] arr1mH = arr1m.clone();
 
         System.out.println("\nSorting random array:\n");
-        System.out.println("\u001B[36mShell 100k elements: " + dp.sorting(arr100kS) + " ns");
-        System.out.println("Shell 1m elements: " + dp.sorting(arr1mS) + " ns");
+        System.out.println("\u001B[36mShell 100k elements: " + dp.sorting(arr100kS) + " ms");
+        System.out.println("Shell 1m elements: " + dp.sorting(arr1mS) + " ms");
 
         dp.setSorter(new MergeSort());
-        System.out.println("\u001B[35mMerge 100k elements: " + dp.sorting(arr100kM) + " ns");
-        System.out.println("Merge 1m elements: " + dp.sorting(arr1mM) + " ns");
+        System.out.println("\u001B[35mMerge 100k elements: " + dp.sorting(arr100kM) + " ms");
+        System.out.println("Merge 1m elements: " + dp.sorting(arr1mM) + " ms");
 
         dp.setSorter(new HeapSort());
-        System.out.println("\u001B[32mHeap 100k elements: " + dp.sorting(arr100kH) + " ns");
-        System.out.println("Heap 1m elements: " + dp.sorting(arr1mH) + " ns");
+        System.out.println("\u001B[32mHeap 100k elements: " + dp.sorting(arr100kH) + " ms");
+        System.out.println("Heap 1m elements: " + dp.sorting(arr1mH) + " ms");
 
         dp.setSorter(new QuickSort());
-        System.out.println("\u001B[34mQuick 100k elements: " + dp.sorting(arr100kQ) + " ns");
-        System.out.println("Quick 1m elements: " + dp.sorting(arr1mQ) + " ns");
+        System.out.println("\u001B[34mQuick 100k elements: " + dp.sorting(arr100kQ) + " ms");
+        System.out.println("Quick 1m elements: " + dp.sorting(arr1mQ) + " ms");
         System.out.println(" ");
 
         dp.setFiller(new ConsistentFiller());
@@ -59,20 +59,20 @@ public class Main {
 
         System.out.println("\u001B[30mSorting consistent array:\u001B[30m\n");
         dp.setSorter(new ShellSort());
-        System.out.println("\u001B[36mShell 100k elements: " + dp.sorting(arr100kS) + " ns");
-        System.out.println("Shell 1m elements: " + dp.sorting(arr1mS) + " ns");
+        System.out.println("\u001B[36mShell 100k elements: " + dp.sorting(arr100kS) + " ms");
+        System.out.println("Shell 1m elements: " + dp.sorting(arr1mS) + " ms");
 
         dp.setSorter(new MergeSort());
-        System.out.println("\u001B[35mMerge 100k elements: " + dp.sorting(arr100kM) + " ns");
-        System.out.println("Merge 1m elements: " + dp.sorting(arr1mM) + " ns");
+        System.out.println("\u001B[35mMerge 100k elements: " + dp.sorting(arr100kM) + " ms");
+        System.out.println("Merge 1m elements: " + dp.sorting(arr1mM) + " ms");
 
         dp.setSorter(new HeapSort());
-        System.out.println("\u001B[32mHeap 100k elements: " + dp.sorting(arr100kH) + " ns");
-        System.out.println("Heap 1m elements: " + dp.sorting(arr1mH) + " ns");
+        System.out.println("\u001B[32mHeap 100k elements: " + dp.sorting(arr100kH) + " ms");
+        System.out.println("Heap 1m elements: " + dp.sorting(arr1mH) + " ms");
 
         dp.setSorter(new QuickSort());
-        System.out.println("\u001B[34mQuick 100k elements: " + dp.sorting(arr100kQ) + " ns");
-        System.out.println("Quick 1m elements: " + dp.sorting(arr1mQ) + " ns");
+        System.out.println("\u001B[34mQuick 100k elements: " + dp.sorting(arr100kQ) + " ms");
+        System.out.println("Quick 1m elements: " + dp.sorting(arr1mQ) + " ms");
     }
 
 }

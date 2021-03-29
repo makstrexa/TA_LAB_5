@@ -3,7 +3,7 @@ package lab;
 public class HeapSort implements Sorter {
     public long sort(int[] arr) {
         long finish;
-        long start = System.nanoTime();
+        long start = System.currentTimeMillis();
         int n = arr.length;
         for (int i = n / 2 - 1; i >= 0; i--)
             heapify(arr, n, i);
@@ -13,8 +13,8 @@ public class HeapSort implements Sorter {
             arr[i] = temp;
             heapify(arr, i, 0);
         }
-        finish = System.nanoTime();
-        return (finish - start) / 1000000;
+        finish = System.currentTimeMillis();
+        return finish - start;
     }
 
     void heapify(int[] arr, int n, int i) {

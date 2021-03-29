@@ -4,7 +4,7 @@ public class MergeSort implements Sorter {
     @Override
     public long sort(int[] array) {
         long finish;
-        long start = System.nanoTime();
+        long start = System.currentTimeMillis();
         int[] tmp;
         int[] currentSrc = array;
         int[] currentDest = new int[array.length];
@@ -22,8 +22,8 @@ public class MergeSort implements Sorter {
             size = size * 2;
 
         }
-        finish = System.nanoTime();
-        return (finish - start) / 1000000;
+        finish = System.currentTimeMillis();
+        return finish - start;
     }
 
     private static void merge(int[] src1, int src1Start, int[] src2, int src2Start, int[] dest,

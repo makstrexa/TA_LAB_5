@@ -3,12 +3,12 @@ package lab;
 public class QuickSort implements Sorter{
     public long sort(int[] arr) {
         long finish;
-        long start = System.nanoTime();
+        long start = System.currentTimeMillis();
 
         quickSort(arr, 0, arr.length - 1);
 
-        finish = System.nanoTime();
-        return (finish - start) / 1000000;
+        finish = System.currentTimeMillis();
+        return finish - start;
     }
 
     public static void quickSort(int[] arr, long from, long to) {

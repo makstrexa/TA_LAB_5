@@ -3,7 +3,7 @@ package lab;
 public class ShellSort implements Sorter {
     public long sort(int[] array) {
         long finish;
-        long start = System.nanoTime();
+        long start = System.currentTimeMillis();
 
         for (int step = array.length / 2; step > 0; step /= 2) {
             for (int i = step; i < array.length; i++) {
@@ -15,7 +15,7 @@ public class ShellSort implements Sorter {
             }
         }
 
-        finish = System.nanoTime();
-        return (finish - start) / 1000000;
+        finish = System.currentTimeMillis();
+        return finish - start;
     }
 }
